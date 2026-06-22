@@ -11,6 +11,8 @@ npm-debug.log*
 
 # scratch dev tooling (headless screenshot / scraper scripts)
 web/*.mjs
+# ...but never ignore real config files (postcss/eslint) — Tailwind needs these
+!web/*.config.mjs
 
 # raw, ungraded image pulls
 web/public/images/_raw/
