@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Namaste Spa & Wellness — Sherwood Park's Sanctuary for Self-Care &amp; Healing</title>
+  <meta name="description" content="A sanctuary where ancient ritual meets advanced skincare. Massage, Head Spa Ritual, Ayurveda, skin &amp; aesthetics and body contouring in Sherwood Park, Alberta. We direct-bill your benefits. Book your peace." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container utility__inner">
+      <p class="utility__item">Sherwood Park &amp; Calgary, Alberta</p>
+      <p class="utility__item utility__billing"><span class="dot"></span> We direct-bill your benefits — Blue&nbsp;Cross, Manulife, Sunlife &amp; more</p>
+      <a class="utility__item utility__phone" href="tel:7804679809">(780) 467-9809</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#" aria-label="Namaste Spa &amp; Wellness — home">
+        <img class="brand__mark" src="assets/logo.png" alt="" width="44" height="44" />
+        <span class="brand__name">Namaste<span class="brand__sub">spa &amp; wellness</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item has-mega">
+            <button class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-treatments">Treatments <span class="caret" aria-hidden="true"></span></button>
+            <div class="mega" id="mega-treatments">
+              <div class="mega__col">
+                <p class="mega__eyebrow">Restore</p>
+                <p class="mega__tag">The ritual. The calm. The experience.</p>
+                <ul class="mega__links">
+                  <li><a href="#treatments">Massage Therapy</a></li>
+                  <li><a href="#treatments">Head Spa Ritual</a></li>
+                  <li><a href="#treatments">Ayurveda &amp; Shirodhara</a></li>
+                  <li><a href="#treatments">Wellness</a></li>
+                  <li><a href="#treatments">The Boutique</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <p class="mega__eyebrow mega__eyebrow--gold">Renew</p>
+                <p class="mega__tag">The science. The glow. The results.</p>
+                <ul class="mega__links">
+                  <li><a href="#treatments">Skin &amp; Aesthetics</a></li>
+                  <li><a href="#treatments">Microneedling</a></li>
+                  <li><a href="#treatments">Dermaplaning &amp; Microderm</a></li>
+                  <li><a href="#treatments">Body Contouring</a></li>
+                  <li><a href="#treatments">Qi Beauty</a></li>
+                </ul>
+              </div>
+              <div class="mega__col mega__col--feature">
+                <p class="mega__eyebrow">New &amp; loved</p>
+                <p class="mega__feature-title">The Head Spa Ritual</p>
+                <p class="mega__feature-copy">A multi-sensory journey for the hair, the scalp, and the soul.</p>
+                <a class="link-arrow" href="#treatments">Discover the ritual</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#space">About</a></li>
+          <li class="nav__item"><a class="nav__link" href="#treatments">Boutique</a></li>
+          <li class="nav__item"><a class="nav__link" href="#packages">Specials</a></li>
+          <li class="nav__item"><a class="nav__link" href="#visit">Locations</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary header__cta" href="#visit">Book your peace</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <nav aria-label="Mobile">
+      <p class="mobile-nav__eyebrow">Restore</p>
+      <a href="#treatments">Massage Therapy</a>
+      <a href="#treatments">Head Spa Ritual</a>
+      <a href="#treatments">Ayurveda &amp; Shirodhara</a>
+      <a href="#treatments">Wellness</a>
+      <p class="mobile-nav__eyebrow mobile-nav__eyebrow--gold">Renew</p>
+      <a href="#treatments">Skin &amp; Aesthetics</a>
+      <a href="#treatments">Body Contouring</a>
+      <a href="#treatments">Qi Beauty</a>
+      <p class="mobile-nav__eyebrow">More</p>
+      <a href="#space">About</a>
+      <a href="#packages">Specials</a>
+      <a href="#visit">Locations</a>
+      <a class="btn btn--primary mobile-nav__cta" href="#visit">Book your peace</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="assets/hero.jpg" alt="A serene stone figure resting in warm candlelight at Namaste Spa" width="1920" height="840" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="container hero__content reveal">
+        <p class="eyebrow eyebrow--light">Wellness · Beauty · Balance</p>
+        <h1 class="hero__title">Book your peace.</h1>
+        <p class="hero__lead">Sherwood Park's sanctuary for self-care and healing — where ancient ritual meets advanced skincare.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#visit">Book an appointment</a>
+          <a class="btn btn--ghost-light btn--lg" href="#treatments">Explore treatments</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#promise" aria-label="Scroll to discover more"><span></span></a>
+    </section>
+
+    <!-- Promise / pillars -->
+    <section class="promise section" id="promise">
+      <div class="container promise__inner reveal">
+        <p class="eyebrow">Two ways home to yourself</p>
+        <h2 class="promise__title">A spa for your calm — and a clinic for your glow.</h2>
+        <p class="promise__copy">Most places ask you to choose between an escape and a result. At Namaste you don't. Sink into the ritual of massage, head spa, and Ayurveda — or step into advanced skin and body treatments delivered with real expertise. Same sanctuary. Both kinds of care.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <p class="pillar__label">Restore</p>
+            <p class="pillar__desc">Massage · Head Spa Ritual · Ayurveda · Wellness · Boutique</p>
+          </div>
+          <div class="pillar pillar--gold">
+            <p class="pillar__label">Renew</p>
+            <p class="pillar__desc">Skin &amp; Aesthetics · Microneedling · Body Contouring · Qi Beauty</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature treatments -->
+    <section class="treatments section section--sand" id="treatments">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Signature treatments</p>
+          <h2 class="section-head__title">Rituals worth returning for.</h2>
+        </div>
+
+        <p class="row-label reveal"><span>Restore</span><i></i></p>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__media"><img src="assets/headspa.jpg" alt="A guest receiving the Namaste Head Spa Ritual under soft light therapy" width="800" height="1000" loading="lazy" /></div>
+            <div class="card__body">
+              <p class="card__eyebrow">Restore · New</p>
+              <h3 class="card__title">The Head Spa Ritual</h3>
+              <p class="card__copy">An unforgettable, multi-sensory experience that transcends traditional scalp care — engaging the hair, the scalp, and the soul.</p>
+              <a class="link-arrow" href="#visit">Explore</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media"><img src="assets/massage.jpg" alt="A guest relaxing during a restorative massage at Namaste Spa" width="800" height="1000" loading="lazy" style="object-position:center top" /></div>
+            <div class="card__body">
+              <p class="card__eyebrow">Restore</p>
+              <h3 class="card__title">Massage Therapy</h3>
+              <p class="card__copy">Therapeutic, relaxation, hot stone and prenatal massage — with your therapist and pressure, your way. We direct-bill most benefits.</p>
+              <a class="link-arrow" href="#visit">Explore</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media"><img src="assets/ayurveda.jpg" alt="Warm oil poured during a traditional Ayurvedic Shirodhara treatment" width="800" height="1000" loading="lazy" /></div>
+            <div class="card__body">
+              <p class="card__eyebrow">Restore</p>
+              <h3 class="card__title">Ayurveda &amp; Shirodhara</h3>
+              <p class="card__copy">The art of living wisely — a 5,000-year-old practice that nurtures mind, body and spirit, recognised by the World Health Organization.</p>
+              <a class="link-arrow" href="#visit">Explore</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="row-label row-label--gold reveal"><span>Renew</span><i></i></p>
+        <div class="cards">
+          <article class="card card--solid reveal">
+            <div class="card__body card__body--tall">
+              <p class="card__eyebrow card__eyebrow--gold">Renew</p>
+              <h3 class="card__title">Skin &amp; Aesthetics</h3>
+              <p class="card__copy">Microneedling, dermaplaning and microdermabrasion — advanced, results-driven skin treatments tailored to you.</p>
+              <a class="link-arrow link-arrow--light" href="#visit">Explore</a>
+            </div>
+          </article>
+          <article class="card card--solid reveal">
+            <div class="card__body card__body--tall">
+              <p class="card__eyebrow card__eyebrow--gold">Renew</p>
+              <h3 class="card__title">Body Contouring</h3>
+              <p class="card__copy">Non-invasive Slimwave technology to tone, firm and sculpt — relaxing sessions with a visible difference.</p>
+              <a class="link-arrow link-arrow--light" href="#visit">Explore</a>
+            </div>
+          </article>
+          <article class="card card--solid reveal">
+            <div class="card__body card__body--tall">
+              <p class="card__eyebrow card__eyebrow--gold">Renew</p>
+              <h3 class="card__title">Qi Beauty</h3>
+              <p class="card__copy">A natural, non-surgical approach to renewing the skin's vitality — energy and radiance, restored.</p>
+              <a class="link-arrow link-arrow--light" href="#visit">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The space -->
+    <section class="space section" id="space">
+      <div class="container space__grid">
+        <div class="space__media reveal">
+          <img src="assets/space.jpg" alt="The warm, wood-lined Namaste boutique and spa interior" width="1080" height="525" loading="lazy" />
+        </div>
+        <div class="space__copy reveal">
+          <p class="eyebrow">The space</p>
+          <h2 class="space__title">Step inside, and the city goes quiet.</h2>
+          <p>Warm wood, soft light, the glint of copper and the calm of stone. Our modern, ancient-inspired spa blends time-honoured tradition with the latest techniques — and the boutique lets you carry a little of that tranquility home with you.</p>
+          <p class="space__note">Imported treasures · curated wellness · a true escape, minutes from home.</p>
+          <a class="link-arrow" href="#visit">Plan your visit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ayurveda philosophy band -->
+    <section class="quote" style="background-image:url('assets/ritual.jpg')">
+      <div class="quote__scrim"></div>
+      <div class="container quote__inner reveal">
+        <p class="eyebrow eyebrow--light">The wisdom we're built on</p>
+        <blockquote class="quote__text">"It tells us which substances, qualities, and actions are life-enhancing — and which are not."</blockquote>
+        <p class="quote__cite">— Charaka Samhita, on Ayurveda · c. 150 BCE</p>
+      </div>
+    </section>
+
+    <!-- Proof / trust -->
+    <section class="proof section section--sand">
+      <div class="container">
+        <div class="trust reveal">
+          <div class="trust__item"><span class="trust__num">13K+</span><span class="trust__label">community who trust us</span></div>
+          <div class="trust__item"><span class="trust__num">2</span><span class="trust__label">locations · Sherwood Park &amp; Calgary</span></div>
+          <div class="trust__item"><span class="trust__num">10+</span><span class="trust__label">years caring for our city</span></div>
+          <div class="trust__item"><span class="trust__num">Direct</span><span class="trust__label">insurance billing on the spot</span></div>
+        </div>
+
+        <div class="section-head section-head--center reveal" style="margin-top:var(--space-96)">
+          <p class="eyebrow">In their words</p>
+          <h2 class="section-head__title">Loved across Sherwood Park.</h2>
+        </div>
+        <!-- NOTE: placeholder testimonials — to be replaced with real, attributed Google/Yelp/Instagram reviews before launch. -->
+        <div class="reviews reveal">
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>The head spa ritual was the most relaxed I've felt in years. I walked out lighter than I walked in.</blockquote>
+            <figcaption>Sample review · to be replaced with a verified guest review</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>They direct-billed my benefits, my therapist was wonderful, and the space is just beautiful. My new regular.</blockquote>
+            <figcaption>Sample review · to be replaced with a verified guest review</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>Equal parts pampering and real results. The skin treatments are excellent and it never feels clinical.</blockquote>
+            <figcaption>Sample review · to be replaced with a verified guest review</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages & gifting -->
+    <section class="gift section" id="packages">
+      <div class="container gift__inner reveal">
+        <div class="gift__text">
+          <p class="eyebrow">Packages &amp; gifting</p>
+          <h2 class="gift__title">Give the gift of peace.</h2>
+          <p>Spa packages for a half-day of calm, memberships for the ones who make self-care a habit, and gift cards for the people you love. Tranquility, ready to give.</p>
+          <div class="gift__actions">
+            <a class="btn btn--primary" href="#visit">Buy a gift card</a>
+            <a class="btn btn--secondary" href="#visit">View packages</a>
+          </div>
+        </div>
+        <div class="gift__card" aria-hidden="true">
+          <div class="giftcard">
+            <span class="giftcard__brand">Namaste</span>
+            <span class="giftcard__label">Gift of Peace</span>
+            <span class="giftcard__lotus">✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit / book -->
+    <section class="visit section section--ink" id="visit">
+      <div class="container visit__grid">
+        <div class="visit__info reveal">
+          <p class="eyebrow eyebrow--light">Visit us</p>
+          <h2 class="visit__title">Your peace is one booking away.</h2>
+
+          <div class="visit__cols">
+            <div>
+              <h3 class="visit__sub">Hours</h3>
+              <table class="hours">
+                <tr><td>Sunday</td><td>Closed</td></tr>
+                <tr><td>Monday</td><td>11am – 7pm</td></tr>
+                <tr><td>Tue – Fri</td><td>10am – 8pm</td></tr>
+                <tr><td>Saturday</td><td>10am – 5pm</td></tr>
+              </table>
+            </div>
+            <div>
+              <h3 class="visit__sub">Find us</h3>
+              <p class="visit__line">Suite #216 – 2016 Sherwood Dr<br />Sherwood Park, AB</p>
+              <p class="visit__line"><a href="tel:7804679809">(780) 467-9809</a><br /><a href="mailto:info@namastespa.ca">info@namastespa.ca</a></p>
+              <p class="visit__line visit__muted">Also in Calgary · online appointments available</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="visit__form reveal" novalidate>
+          <h3 class="visit__sub">Request your appointment</h3>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <p class="field__hint">We'll confirm your booking here.</p>
+          </div>
+          <div class="field">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service">
+              <option>Massage Therapy</option>
+              <option>Head Spa Ritual</option>
+              <option>Ayurveda &amp; Shirodhara</option>
+              <option>Skin &amp; Aesthetics</option>
+              <option>Body Contouring</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Anything we should know? <span class="field__opt">(optional)</span></label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Book your peace</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name brand__name--light">Namaste<span class="brand__sub">spa &amp; wellness</span></span>
+        <p class="footer__tag">Sherwood Park's sanctuary for self-care &amp; healing.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/namastedayspa/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/pages/Namaste-Wellness-and-Day-Spa-Inc/302900363080210" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#treatments">Treatments</a>
+        <a href="#space">About</a>
+        <a href="#packages">Gift cards</a>
+        <a href="#visit">Locations</a>
+        <a href="tel:7804679809">(780) 467-9809</a>
+      </nav>
+      <a class="btn btn--ghost-light footer__cta" href="#visit">Book your peace</a>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; <span id="year">2026</span> Namaste Wellness &amp; Day Spa. All rights reserved.</p>
+      <p>Sherwood Park · Calgary · Alberta</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

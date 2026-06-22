@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Namaste Spa — design tokens (from design-system.md)
+   Tailwind v4 CSS-first theme. A token like --color-sage generates bg-sage etc.
+   =========================================================================== */
+@theme {
+  /* Colour — core */
+  --color-base: #f7f4ee;        /* warm linen — page bg */
+  --color-surface: #fdfbf6;     /* warm off-white — cards */
+  --color-ink: #29302b;         /* green-charcoal — text primary */
+  --color-muted: #6b7268;       /* muted sage-grey — text secondary */
+
+  /* Colour — sage (accent) ladder */
+  --color-sage: #5e7257;        /* brand accent — fills, large type */
+  --color-sage-deep: #3f5139;   /* interactive — buttons, links (AA on light) */
+  --color-sage-soft: #7e927a;   /* decorative */
+  --color-sage-tint: #e7ebe2;   /* pale wash sections */
+
+  /* Colour — gold (micro-accent) */
+  --color-gold: #b0894c;
+  --color-gold-deep: #8f6e38;   /* gold text on light (AA) */
+
+  /* Colour — neutrals / system */
+  --color-sand: #ede7db;        /* alternating band */
+  --color-line: #e2dcd0;        /* hairlines */
+  --color-error: #b3261e;
+
+  /* Typography (font vars set by next/font in layout.tsx) */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-hanken), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale (fluid) */
+  --text-display: clamp(2.75rem, 6vw, 5.5rem);
+  --text-display--line-height: 1.04;
+  --text-h1: clamp(2.25rem, 4vw, 3rem);
+  --text-h1--line-height: 1.1;
+  --text-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.625rem;
+  --text-h3--line-height: 1.2;
+
+  /* Radii */
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  /* Easing */
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===========================================================================
+   Base
+   =========================================================================== */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--color-base);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  @media (min-width: 768px) { body { font-size: 18px; } }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+  }
+  ::selection { background: var(--color-sage); color: var(--color-surface); }
+  :focus-visible { outline: 2px solid var(--color-sage); outline-offset: 2px; border-radius: 3px; }
+  a { color: inherit; text-decoration: none; }
+}
+
+/* ===========================================================================
+   Reusable design-system pieces
+   =========================================================================== */
+@layer components {
+  .container-x { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: 1rem; }
+  @media (min-width: 768px) { .container-x { padding-inline: 1.5rem; } }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8125rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--color-gold-deep);
+  }
+  .eyebrow--light { color: color-mix(in srgb, var(--color-gold) 75%, white); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    font-family: var(--font-body); font-weight: 600; font-size: 0.975rem; line-height: 1;
+    padding: 0.95rem 1.6rem; border-radius: var(--radius-pill);
+    border: 1px solid transparent; cursor: pointer; min-height: 48px;
+    transition: transform 0.18s var(--ease-soft), background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  }
+  .btn--lg { padding: 1.1rem 2rem; font-size: 1.05rem; }
+  .btn--block { width: 100%; }
+  .btn--primary { background: var(--color-sage-deep); color: var(--color-surface); }
+  .btn--primary:hover { background: #344431; transform: translateY(-1px); }
+  .btn--secondary { background: transparent; border-color: var(--color-sage-deep); color: var(--color-sage-deep); }
+  .btn--secondary:hover { background: var(--color-sage-tint); }
+  .btn--ghost-light { background: transparent; border-color: color-mix(in srgb, white 55%, transparent); color: #fff; }
+  .btn--ghost-light:hover { background: rgba(255,255,255,0.12); }
+
+  /* Arrow link with animated gold underline */
+  .link-arrow {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+    color: var(--color-sage-deep); padding-bottom: 2px;
+    background-image: linear-gradient(var(--color-gold), var(--color-gold));
+    background-size: 0% 1.5px; background-position: 0 100%; background-repeat: no-repeat;
+    transition: background-size 0.25s var(--ease-soft);
+  }
+  .link-arrow::after { content: "→"; transition: transform 0.25s var(--ease-soft); }
+  .link-arrow:hover { background-size: 100% 1.5px; }
+  .link-arrow:hover::after { transform: translateX(3px); }
+  .link-arrow--light { color: #fff; }
+}
+
+/* ===========================================================================
+   Motion — calm reveals, reduced-motion respected
+   =========================================================================== */
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.6s var(--ease-soft), transform 0.6s var(--ease-soft);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===========================================================================
+   Elevation layer — craft, texture, cinematic motion
+   =========================================================================== */
+
+/* Paper/linen grain — kills digital flatness. Layered via ::after. */
+.grain { position: relative; }
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+/* Cinematic hero — the image breathes, almost imperceptibly */
+.hero-breathe { animation: heroBreathe 22s ease-in-out infinite alternate; transform-origin: 60% 50%; }
+@keyframes heroBreathe {
+  from { transform: scale(1.03); }
+  to   { transform: scale(1.1); }
+}
+
+/* Word-by-word hero reveal */
+.word { display: inline-block; opacity: 0; transform: translateY(0.5em); animation: wordUp 0.85s var(--ease-soft) forwards; }
+@keyframes wordUp { to { opacity: 1; transform: none; } }
+
+/* Editorial: oversized vertical section index that bleeds */
+.edge-index {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 0.8;
+  color: color-mix(in srgb, var(--color-sage) 14%, transparent);
+  letter-spacing: -0.04em;
+}
+
+/* Display italic flourish */
+.flourish { font-style: italic; font-weight: 300; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-breathe { animation: none; }
+  .word { opacity: 1; transform: none; animation: none; }
+}
